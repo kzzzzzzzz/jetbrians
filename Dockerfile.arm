@@ -1,0 +1,13 @@
+FROM armhf/alpine
+
+LABEL maintainer="kzzzzzzzz <959705808@qq.com>" \
+	version="1.0" \
+	description="JetBrainsLicenseServer"
+
+ADD JetBrainsLicenseServer_arm /app/
+ADD main_arm.sh /app/
+WORKDIR /app
+EXPOSE 1228
+ENV USER_NAME "kzzzzzzzz"
+
+CMD ["./main_arm.sh"]
